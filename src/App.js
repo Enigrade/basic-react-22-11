@@ -13,8 +13,6 @@ class App extends Component {
   }
 
   render() {
-    const { from, to } = this.state
-    const modifiers = { start: from, end: to }
     return (
       <div>
         <UserForm />
