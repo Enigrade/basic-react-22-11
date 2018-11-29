@@ -1,5 +1,5 @@
 import React from 'react'
-import Comment from './comment'
+import CommentList from './CommentList'
 
 function Article(props) {
   const { article, isOpen, toggleOpen } = props
@@ -18,14 +18,7 @@ function getBody({ isOpen, article }) {
   return (
     <section>
       <div>{article.text}</div>
-      <h3>Comments</h3>
-      <ul>
-        {article.comments.map((comment) => (
-          <li key={comment.id}>
-            <Comment comment={comment} />
-          </li>
-        ))}
-      </ul>
+      <CommentList comments={article.comments} />
     </section>
   )
 }
